@@ -29,12 +29,13 @@ Phase one: The Depositor will start when the user tells it to check the Communic
 
 Phase two: The Depositor will be able to notice if a user drops CloudCoins into a desktop folder. It will be able to look through emails and other things.  
 ### Details
-The Depositor must use the "Receivel 
+The Depositor must use be able to 
 ### Configuration
 If the Depositor is to access the ComBroker anonymously, it must have a CloudCoin in its "Keys" folder that it will use as a access token. The Depositor will first need to use the key to get tickets from the RAIDA. Then it can use the tickets to download any coins.  
 
-
-### 
+### Reports
+The Depositor must 
+### Logs
 
 
 ## Echoer
