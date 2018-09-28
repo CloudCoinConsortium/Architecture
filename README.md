@@ -22,6 +22,20 @@ There are a few rules about servants.
 # Servants
 
 ## Depositor
+### Overview
+The Depositor's job is to get CloudCoins from outside of the program and bring them into the import folder. This may mean getting CloudCoins from a "Deposit" folder on the desktop; scanning new emails for CloudCoins or checking a Communications Broker to see if it has recieved CloudCoins. 
+### Events
+Phase one: The Depositor will start when the user tells it to check the Communication Broker for new coins. The user may have an account on ComBroker or access the Coins anonymously. 
+
+Phase two: The Depositor will be able to notice if a user drops CloudCoins into a desktop folder. It will be able to look through emails and other things.  
+### Details
+The Depositor must use the "Receivel 
+### Configuration
+If the Depositor is to access the ComBroker anonymously, it must have a CloudCoin in its "Keys" folder that it will use as a access token. The Depositor will first need to use the key to get tickets from the RAIDA. Then it can use the tickets to download any coins.  
+
+
+### 
+
 
 ## Echoer
 
@@ -68,5 +82,12 @@ There are a few rules about servants.
 ## WebService
 
 ## PhysicalDetection
+
+# Reports
+
+# Configuration Files
+
+# Logs
+
 
 
