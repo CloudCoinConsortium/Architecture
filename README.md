@@ -47,6 +47,8 @@ The Depositor must
 ## Grader
 
 ## Lossfixer
+ 
+SometimesDuring the pounding proces The raiderReturnsNo response.In this caseIt Is unknownWhether the radarUpdated the a.m. with the PamOr not.If a substantial number of radarDo not respondThen the coin is considered lost.Loss fixerWe'll use informationFrom theClaim before it wasSent to the radarAnd the claim after was that's the raterTo see WhichNumberIs in the rater.So the lost fixerMust checkThe a.m.And the PamTo seeWhich one is correct.Once the loss fixtureFigures out. Which number is in the raiderthe coin d tohtcan e bank folde.r be t 
 
 ## FrackFixer
 
@@ -54,9 +56,13 @@ The Depositor must
 
 ## Gallerist
 
+Some cloudCoins are associated with custom JPEG's. These CloudCoins become Celebriutm. When cloudCoins are placed into the bank folder, The Gallerist will go to work and check them to see if they have images associated with them. If so, The Gallaerist download the jpes and associated meta data and puts it in the Gallery folder. 
+
 ## Minder
+The job of the Minder is to allow CloudCOins to be stored in mind. It also allows coins stored in mind to be put bank in the bank. The minder requires the user to supply two passphrases and from the passphrases it creats new ANs for the coins and changes them on the raida. Then it deletes the coins on the local drive but saves the serial number in the Mind folder. 
 
 ## Vaulter
+The Vault is a folder that is theft resistant. The CloudCoins here have number that if used would not work. The vaulter takes the CloudCoins from the bank and a password from the user. It then adds the password to the second octet of the AN. This makes the CloudCoin unusable. Then, when the person wants to spend them,it will prompt for the password and the password is suptrackted from the octet in the AN putting it back to its original state. 
 
 ## Exporter
 
@@ -65,14 +71,22 @@ The Depositor must
 ## Transfere
 
 ## PayForwarder
+Payforward takes coins from the bank folder and sends them to the RAIDA using the PAY Foward protocol. The raida will create it own PANs and send them to the specified Communications Broker. This allow transfers to go from person to person without using email. 
 
 ## DirectoryMonitor
+This process goes to the Diretory and downloads the DNS names that are primary, secondary and tertiariy. These names then can be used to find the RAIDA. 
+
 
 ## Backuper
+This process exports all the coins in the bank, fracked folder, Vault and Gallery into a stack file. This can be saved in another location in case someone loses coins. 
+
 
 ## Translator
+The translator reads the logs and places the information into the Main Status Report. The Main status report is used by GUIs. The Translater may change the langauge that the GUI will use by translating the outcome. 
 
 # GUI Servants
+These GUI programs generate commands and place them in command folders. It also sets configuraion files. Then, it monitors the Master Status Report to see if anything changes. When changes happen, it updates itself to show the user the changes. 
+
 
 ## Console
 
