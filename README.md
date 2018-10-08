@@ -21,48 +21,9 @@ There are a few rules about servants.
 
 # Servants
 
-## Communications Broker Receiver
+## Receiver
 
-The CB (Comunications Broker) receives CloudCoin authenticity numbers from the RAIDA. It does this by exposing a POST page. 
-The protocol for this is in CloudBank V2. When a RAIDA calls the CB's PayForward server the CB will create a temporary folder to hold the ANs. These Folders will be found in a folder called "Partial" that is in the root folder for the CloudCoin files. Within the Partial direcory there will be a subfolder created for the accout name or number provided by the sender. Within the folder with the account name will be a folder with the serial number. 
-The information needed to assemble the ANs into one CloudCoin will be included in the file names within the serial number folder. Each CloudCoin folder will have 25. The file names have the following parts:
-1. Raida Number.
-2. Authenticity Number
-3. Ticket (which can be used to verify that the request was from a real raida. 
-4. File Extention: "txt"
-5. The ticket status (either suspect because the ticket must be checked or Authentic meaning the ticket was checked and it is good.
-
-Inside the file, other parts of the request can inclue the memo and the from information. 
-
-```
-0.2586b677fbe048a3a1dbfa5f71702906.78e5ecf5bd374f7ea2a65b33204ca182df013c118ce9.suspect.txt
-1.fb3c8e4cfc8948d6971eada3e17031ea.6b29a95ca771df013c118ce942e7a28ddf013c118ce9.suspect.txt
-2.71e5e8e66f1a4258a63f4c4a1674b7ae.580e528f880d4420b71a21df013c118ce9f4ae6a370d.suspect.txt
-...
-24.a22b49973a0c45ba98ba8855c6f461ed.018df013c118ce9d7fa577af4274a5e65ee51e70652a.suspect.txt
-
-6b29a95ca77142e7a28ddf013c118ce9
-580e528f880d4420b71a21f4ae6a370d
-78e5ecf5bd374f7ea2a65b33204ca182
-018d7fa577af4274a5e65ee51e70652a
-```
-contents of the file:
-NOTE One key value pair per line. Order does not matter. 
-```
-order_number=3998
-raida=1
-nn=1
-sn=16773897&
-an=b25fc7a548c341c98cefbac35689aff1
-to_account_name_or_number=8877676&
-change_to_account_name_or_number=28837763
-method=bank
-from_email=Sean@Worthington.net
-total_to_send=385
-ticket=5AB9FA9D23324E52B8BAE707826870DA8760BD4F97ED&
-memo=We love Pay Forward!
-
-```
+The reciever is more like a service and is covered under the CloudBank V2 protocol. 
 
 When the files are added to the folder, a process will check the ticket of each coin AN and if it is good, it will change the status part of the file name to "authentic".
 Once a few seconds go by, the Com Broker will put all the authentic parts together into a stack file. The stack file will incude a "pown" value. All authentic ANs get a "p". If an AN is missing, it gets a "f" for fracked. 
